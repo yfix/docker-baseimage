@@ -1,0 +1,7 @@
+baseimage:
+#  image: yfix/baseimage
+  build: .
+  container_name: yfix_test_baseimage
+  restart: always
+  volumes:
+    - ./container-files/etc/supervisor:/etc/supervisor
