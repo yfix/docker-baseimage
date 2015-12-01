@@ -16,4 +16,4 @@ COPY container-files /
 
 WORKDIR /etc/supervisor/conf.d
 
-CMD ["supervisord", "-n", ""-c", "/etc/supervisor/supervisord.conf"]
+CMD ["supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
