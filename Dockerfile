@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean -y \
   && rm -rf /var/lib/apt/lists/*
 
-COPY container-files /
+COPY docker /
 
 WORKDIR /etc/supervisor/conf.d
 

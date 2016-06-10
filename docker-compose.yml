@@ -4,4 +4,4 @@ baseimage:
   container_name: yfix_test_baseimage
   restart: always
   volumes:
-    - ./container-files/etc/supervisor:/etc/supervisor
+    - ./docker/etc/supervisor:/etc/supervisor
