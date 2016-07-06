@@ -5,6 +5,8 @@ MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 RUN apt-get update && apt-get install -y \
     inotify-tools \
     supervisor \
+    curl \
+    wget \
   \
   && sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf \
   \
