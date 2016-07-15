@@ -5,10 +5,7 @@ MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 RUN apk add \
     inotify-tools \
     supervisor \
-    curl \
-    wget \
-  \
-  && sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
+    curl
 
 COPY docker /
 
