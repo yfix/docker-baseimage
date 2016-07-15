@@ -2,7 +2,7 @@ FROM alpine
 
 MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 
-RUN apk add \
+RUN apk add --no-cache \
     inotify-tools \
     supervisor \
     curl
