@@ -8,9 +8,7 @@ RUN apk add \
     curl \
     wget \
   \
-  && sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf \
-  \
-  && rm /bin/sh && ln -s /bin/bash /bin/sh
+  && sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
 COPY docker /
 
