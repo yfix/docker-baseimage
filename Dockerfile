@@ -9,8 +9,6 @@ RUN apt-get update && apt-get install -y --reinstall \
     wget \
     libc-bin \
   \
-  && sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf \
-  \
   && rm /bin/sh && ln -s /bin/bash /bin/sh \
   \
   && locale-gen en_US en_US.UTF-8 \
