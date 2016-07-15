@@ -1,8 +1,8 @@
-FROM ubuntu:14.04
+FROM alpine
 
 MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 
-RUN apt-get update && apt-get install -y --reinstall \
+RUN apk add \
     inotify-tools \
     supervisor \
     curl \
