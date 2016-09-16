@@ -1,7 +1,9 @@
-baseimage:
-#  image: yfix/baseimage
-  build: .
-  container_name: yfix_test_baseimage
-  restart: always
-  volumes:
-    - ./docker/etc/supervisor:/etc/supervisor
+version: '2'
+services:
+  baseimage:
+#    image: yfix/baseimage
+    build: .
+    container_name: yfix_test_baseimage
+    restart: always
+    volumes:
+      - ./docker/etc/supervisor:/etc/supervisor
