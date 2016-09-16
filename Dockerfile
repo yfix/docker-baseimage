@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y --reinstall \
     supervisor \
     curl \
     wget \
+    dnsutils \
+    net-tools \
     libc-bin \
   \
   && sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf \
