@@ -2,9 +2,9 @@ FROM ubuntu:16.04
 
 MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 
-ARG DEBIAN_FRONTED=noninteractive
+ENV DEBIAN_FRONTED=noninteractive
 
-RUN apt-get update && apt-get install -y --reinstall \
+RUN apt-get update && DEBIAN_FRONTED=noninteractive apt-get install -y --reinstall \
     inotify-tools \
     supervisor \
     curl \
