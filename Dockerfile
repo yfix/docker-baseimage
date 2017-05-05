@@ -14,6 +14,7 @@ RUN apt-get update && DEBIAN_FRONTED=noninteractive apt-get install -y --reinsta
     dnsutils \
     net-tools \
     libc-bin \
+    locales \
   \
   && rm /bin/sh && ln -s /bin/bash /bin/sh \
   \
