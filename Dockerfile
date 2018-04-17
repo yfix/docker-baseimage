@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTED=noninteractive
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
 RUN apt-get update && DEBIAN_FRONTED=noninteractive apt-get install -y --reinstall \
+    cron \
     inotify-tools \
     supervisor \
     curl \
