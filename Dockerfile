@@ -3,6 +3,7 @@ FROM ubuntu:14.04
 MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 
 RUN apt-get update && apt-get install -y --reinstall \
+    cron \
     inotify-tools \
     supervisor \
     curl \
