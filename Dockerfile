@@ -1,8 +1,12 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 
-RUN apt-get update && apt-get install -y --reinstall \
+ENV DEBIAN_FRONTED=noninteractive
+
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+
+RUN apt-get update && DEBIAN_FRONTED=noninteractive apt-get install -y --reinstall \
     cron \
     inotify-tools \
     supervisor \
@@ -11,8 +15,7 @@ RUN apt-get update && apt-get install -y --reinstall \
     dnsutils \
     net-tools \
     libc-bin \
-  \
-  && sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf \
+    locales \
   \
   && rm /bin/sh && ln -s /bin/bash /bin/sh \
   \
