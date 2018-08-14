@@ -16,6 +16,7 @@ RUN apt-get update && DEBIAN_FRONTED=noninteractive apt-get install -y --reinsta
     net-tools \
     libc-bin \
     locales \
+    gnupg \
   \
   && rm /bin/sh && ln -s /bin/bash /bin/sh \
   \

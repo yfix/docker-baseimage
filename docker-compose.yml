@@ -3,7 +3,7 @@ services:
   baseimage:
 #    image: yfix/baseimage
     build: .
-    container_name: yfix_test_baseimage
+    container_name: yfix_test_baseimage_1804
     restart: always
     volumes:
       - ./docker/etc/supervisor:/etc/supervisor
