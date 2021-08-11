@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 

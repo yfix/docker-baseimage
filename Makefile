@@ -1,4 +1,4 @@
-DOCKER_TAG := 'yfix/baseimage:18.04'
+DOCKER_TAG := 'yfix/baseimage:20.04'
 
 build:
 	docker build -t $(DOCKER_TAG) .
